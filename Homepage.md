@@ -6,7 +6,7 @@
 
 I am Yuhuan Wu, a Master's student at the [Hong Kong University of Science and Technology (HKUST)](https://hkust.edu.hk/). I received my Bachelor's degree from [Renmin University of China (RUC)](https://www.ruc.edu.cn/). My research interests center on **Vision-Language Model post-training**, **multimodal pretraining data synthesis**, and **agentic evaluation**. I have published at ECCV, CVPR, EMNLP, and have a first-author paper under review at ICLR 2027.
 
-**Email:** ywuit@connect.ust.hk · **GitHub:** [WhuanY](https://github.com/WhuanY) · **CV:** [PDF](#)
+**Email:** ywuit@connect.ust.hk · **GitHub:** [WhuanY](https://github.com/WhuanY) · **CV:** [PDF](./assets/Yuhuan_Wu_CV.pdf)
 
 ---
 
