@@ -87,7 +87,16 @@
     .news-list .date { color: var(--text-light); display: inline-block; width: 5.5rem; }
 
     /* Publications */
-    .pub { margin-bottom: 1rem; }
+    .pub { display: flex; gap: 1.2rem; align-items: flex-start; margin-bottom: 1.3rem; }
+    .pub-thumb { flex: 0 0 220px; }
+    .pub-thumb img {
+      display: block;
+      width: 100%;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      background: #fff;
+    }
+    .pub-body { flex: 1; min-width: 0; }
     .pub-title { font-weight: 600; font-size: 0.95rem; }
     .pub-venue { color: var(--text-light); font-size: 0.88rem; }
     .pub-venue em { font-style: normal; }
@@ -103,8 +112,22 @@
       margin-right: 0.4rem;
     }
     .pub-links a:hover { background: #dbeafe; }
+    .badge-first, .badge-review { white-space: nowrap; }
     .badge-first { font-size: 0.75rem; background: #fff3cd; color: #856404; padding: 0.1rem 0.4rem; border-radius: 3px; font-weight: 600; }
     .badge-review { font-size: 0.75rem; background: #e8f5e9; color: #2e7d32; padding: 0.1rem 0.4rem; border-radius: 3px; font-weight: 600; }
+
+    /* Brand icons */
+    .logo-icon {
+      width: 20px;
+      height: 20px;
+      object-fit: contain;
+      border-radius: 4px;
+      background: #fff;
+      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.07);
+      vertical-align: -4px;
+      margin-right: 0.45rem;
+    }
+    .edu .logo-icon { vertical-align: -4px; }
 
     /* Experience */
     .exp { margin-bottom: 0.9rem; }
@@ -131,6 +154,8 @@
       .links { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem; }
       .links a { margin-right: 0; }
       .exp-header { flex-direction: column; }
+      .pub { flex-direction: column; gap: 0.6rem; }
+      .pub-thumb { flex: none; width: 100%; }
     }
   </style>
 </head>
@@ -170,31 +195,43 @@
   <h2><i class="fa-solid fa-book"></i> Publications</h2>
 
   <div class="pub">
-    <div class="pub-title">Faultless Misreading: Diagnosing Agents under Incomplete Requests <span class="badge-review">Under Review</span> <span class="badge-first">1st Author</span></div>
-    <div class="pub-authors"><strong>Yuhuan Wu</strong>, et al. (anonymous review)</div>
-    <div class="pub-venue">ICLR 2027 (Under Review)</div>
-    <div class="pub-links"><a href="#">Paper</a></div>
+    <div class="pub-thumb"><img src="./assets/images/pub/faultless-misreading.png" alt="Faultless Misreading overview" loading="lazy"></div>
+    <div class="pub-body">
+      <div class="pub-title">Faultless Misreading: Diagnosing Agents under Incomplete Requests <span class="badge-review">Under Review</span> <span class="badge-first">1st Author</span></div>
+      <div class="pub-authors"><strong>Yuhuan Wu</strong>, et al. (anonymous review)</div>
+      <div class="pub-venue">ICLR 2027 (Under Review)</div>
+      <div class="pub-links"><a href="#">Paper</a></div>
+    </div>
   </div>
 
   <div class="pub">
-    <div class="pub-title">Starve to Perceive: Taming Lazy Perception in VLMs with Constrained Visual Bandwidth <span class="badge-first">1st Author</span></div>
-    <div class="pub-authors"><strong>Yuhuan Wu</strong>, Cong Wei, Fangzhen Lin, Wenhu Chen, Haozhe Wang</div>
-    <div class="pub-venue">European Conference on Computer Vision (ECCV), 2026</div>
-    <div class="pub-links"><a href="https://arxiv.org/abs/2605.18603">Paper</a> <a href="#">Code</a></div>
+    <div class="pub-thumb"><img src="./assets/images/pub/starve2perceive.png" alt="Starve to Perceive overview" loading="lazy"></div>
+    <div class="pub-body">
+      <div class="pub-title">Starve to Perceive: Taming Lazy Perception in VLMs with Constrained Visual Bandwidth <span class="badge-first">1st Author</span></div>
+      <div class="pub-authors"><strong>Yuhuan Wu</strong>, Cong Wei, Fangzhen Lin, Wenhu Chen, Haozhe Wang</div>
+      <div class="pub-venue">European Conference on Computer Vision (ECCV), 2026</div>
+      <div class="pub-links"><a href="https://arxiv.org/abs/2605.18603">Paper</a> <a href="#">Code</a></div>
+    </div>
   </div>
 
   <div class="pub">
-    <div class="pub-title">Improving Vision-language Models with Perception-centric Process Reward Models</div>
-    <div class="pub-authors">Yingqian Min, Kun Zhou, Yifan Li, <strong>Yuhuan Wu</strong>, Han Peng, Yifan Du, Wayne Xin Zhao, Min Yang, Ji-Rong Wen</div>
-    <div class="pub-venue">IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2026</div>
-    <div class="pub-links"><a href="https://arxiv.org/abs/2604.24583">Paper</a></div>
+    <div class="pub-thumb"><img src="./assets/images/pub/perceval.png" alt="Perceval overview" loading="lazy"></div>
+    <div class="pub-body">
+      <div class="pub-title">Improving Vision-language Models with Perception-centric Process Reward Models</div>
+      <div class="pub-authors">Yingqian Min, Kun Zhou, Yifan Li, <strong>Yuhuan Wu</strong>, Han Peng, Yifan Du, Wayne Xin Zhao, Min Yang, Ji-Rong Wen</div>
+      <div class="pub-venue">IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2026</div>
+      <div class="pub-links"><a href="https://arxiv.org/abs/2604.24583">Paper</a></div>
+    </div>
   </div>
 
   <div class="pub">
-    <div class="pub-title">Smart-Searcher: Incentivizing the Dynamic Knowledge Acquisition of LLMs via Reinforcement Learning</div>
-    <div class="pub-authors">Huatong Song, Jinhao Jiang, Wenqing Tian, Zhipeng Chen, <strong>Yuhuan Wu</strong>, Jiahao Zhao, Yingqian Min, Wayne Xin Zhao, Lei Fang, Ji-Rong Wen</div>
-    <div class="pub-venue">Findings of the Association for Computational Linguistics: EMNLP 2025</div>
-    <div class="pub-links"><a href="https://aclanthology.org/2025.findings-emnlp.731/">Paper</a></div>
+    <div class="pub-thumb"><img src="./assets/images/pub/smart-searcher.png" alt="Smart-Searcher overview" loading="lazy"></div>
+    <div class="pub-body">
+      <div class="pub-title">Smart-Searcher: Incentivizing the Dynamic Knowledge Acquisition of LLMs via Reinforcement Learning</div>
+      <div class="pub-authors">Huatong Song, Jinhao Jiang, Wenqing Tian, Zhipeng Chen, <strong>Yuhuan Wu</strong>, Jiahao Zhao, Yingqian Min, Wayne Xin Zhao, Lei Fang, Ji-Rong Wen</div>
+      <div class="pub-venue">Findings of the Association for Computational Linguistics: EMNLP 2025</div>
+      <div class="pub-links"><a href="https://aclanthology.org/2025.findings-emnlp.731/">Paper</a></div>
+    </div>
   </div>
 
   <!-- Experience -->
@@ -202,7 +239,7 @@
 
   <div class="exp">
     <div class="exp-header">
-      <span class="exp-title">Tencent TEG</span>
+      <span class="exp-title"><img class="logo-icon" src="./assets/images/brand/tencent.png" alt="Tencent">Tencent TEG</span>
       <span class="exp-date">May 2026 – Nov. 2026</span>
     </div>
     <div class="exp-role">AI Data Dept. · Foundation Multimodal Data</div>
@@ -211,7 +248,7 @@
 
   <div class="exp">
     <div class="exp-header">
-      <span class="exp-title">Boss Zhipin</span>
+      <span class="exp-title"><img class="logo-icon" src="./assets/images/brand/boss-zhipin.png" alt="Boss Zhipin">Boss Zhipin</span>
       <span class="exp-date">Jun. 2025 – Sep. 2025</span>
     </div>
     <div class="exp-role">Nanbeige · Business Post-training Algorithms</div>
@@ -220,8 +257,8 @@
 
   <!-- Education -->
   <h2><i class="fa-solid fa-graduation-cap"></i> Education</h2>
-  <div class="edu"><strong>Hong Kong University of Science and Technology</strong> · MSc · 2025 – 2027</div>
-  <div class="edu"><strong>Renmin University of China</strong> · BSc · 2021 – 2025</div>
+  <div class="edu"><img class="logo-icon" src="./assets/images/brand/hkust.png" alt="HKUST"><strong>Hong Kong University of Science and Technology</strong> · MSc · 2025 – 2027</div>
+  <div class="edu"><img class="logo-icon" src="./assets/images/brand/ruc.png" alt="Renmin University of China"><strong>Renmin University of China</strong> · BSc · 2021 – 2025</div>
 
   <footer>Last updated: Nov. 2026</footer>
 </div>
