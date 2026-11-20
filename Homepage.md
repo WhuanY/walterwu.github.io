@@ -27,7 +27,7 @@ I am Yuhuan Wu, a Master's student at the [Hong Kong University of Science and T
 
 - **Starve to Perceive: Taming Lazy Perception in VLMs with Constrained Visual Bandwidth**
   **Yuhuan Wu**, Cong Wei, Fangzhen Lin, Wenhu Chen, Haozhe Wang
-  *European Conference on Computer Vision (ECCV), 2026* · [Paper](https://arxiv.org/abs/2605.18603) · [Code](#)
+  *European Conference on Computer Vision (ECCV), 2026* · [Paper](https://arxiv.org/abs/2605.18603) · [Code](https://github.com/WhuanY/Starve2Perceive)
 
 - **Improving Vision-language Models with Perception-centric Process Reward Models**
   Yingqian Min, Kun Zhou, Yifan Li, **Yuhuan Wu**, Han Peng, Yifan Du, Wayne Xin Zhao, Min Yang, Ji-Rong Wen
